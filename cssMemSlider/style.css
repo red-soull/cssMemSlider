@@ -85,11 +85,6 @@ main {
     background-image: url('images/slide_4_somewhen.png');
 }
 
-/* .slide img {
-    width: 100%;
-    height: 100%;
-} */
-
 .slide_description {
     display: flex;
     /* overflow: hidden; */
@@ -138,7 +133,7 @@ input[name='bottons'] {
     transform: scale(1.1);
 }
 
-.bar:after {
+#r1:checked ~ .bar:after {
     background-color: rgb(126, 91, 21);
 }
 
@@ -173,6 +168,23 @@ input[name='bottons'] {
 #r4:checked ~ .slide_description .s1 {
     margin-left: -75%;
 }
+
+#r1:checked ~ .nav_bar .b1{
+    background-color: var(--main-slider-color);
+}
+
+#r2:checked ~ .nav_bar .b2{
+    background-color: var(--main-slider-color);
+}
+
+#r3:checked ~ .nav_bar .b3{
+    background-color: var(--main-slider-color);
+}
+
+#r4:checked ~ .nav_bar .b4{
+    background-color: var(--main-slider-color);
+}
+
 
 @media (max-width: 420px) {
     main {
