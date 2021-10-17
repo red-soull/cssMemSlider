@@ -2,6 +2,7 @@
     --main-slider-color: darkgray;
     --text-color: white;
     --font-size: 2.5rem;
+    --font-size-small: 1em;
     --bar-color: white;
 }
 
@@ -171,4 +172,36 @@ input[name='bottons'] {
 
 #r4:checked ~ .slide_description .s1 {
     margin-left: -75%;
+}
+
+@media (max-width: 420px) {
+    main {
+        padding: 1em;
+        padding-top: 6em;
+    }
+    .slider {
+        width: 90%;
+        height: 90%;
+        grid-template-columns: 9fr;
+        grid-template-rows: 9fr 1fr 1fr;
+        grid-row-gap: 2em;
+    }
+
+    .slides {  
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        
+    }
+
+    .slide_description {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        font-size: var(--font-size-small); 
+    }
+
+    .nav_bar {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
 }
